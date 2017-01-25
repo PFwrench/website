@@ -4,6 +4,7 @@ block content
   .nav
     h1.name Hi. I'm Peter French.
     .buttons
+      .spacer
       #about.tooltip
         i.fa.fa-home.fa-2x
         span.tooltiptext About
@@ -16,7 +17,9 @@ block content
       #contact.tooltip
         i.fa.fa-comment-o.fa-2x
         span.tooltiptext Contact
+      .spacer
   .back
+    img.picture(src='https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-1/p160x160/12313814_1021130574616524_2538527895808493592_n.jpg?oh=fd50e3bc67063df6094e8a4c702d025c&oe=592043EB')
     ul.info
       li #[i.fa.fa-envelope] : #[a(href='mailto:peter.fwrench@gmail.com') peter.fwrench@gmail.com]
       li #[i.fa.fa-phone] : #[a(href='tel:512-221-0375') (512)221-0375]
@@ -30,18 +33,21 @@ block content
     .back-button
       a(href='#')
         i.fa.fa-undo.fa-lg
-  .card.card-1.hidden
-    h2 This is where a picture will go.
-    p I'm developer from Austin, Texas currently studying Computer Science at Texas A&M University in College Station, Texas.
-  .card.card-2.hidden
-    h2 This is where a picture will go.
-    p I'm developer from Austin, Texas currently studying Computer Science
-  .card.card-3.hidden
-    h2 This is where a picture will go.
-    p I'm developer from Austin, Texas
-  .card.card-4.hidden
-    h2 This is where a picture will go.
-    p I'm developer from Austin, Texas
+  .card.card-1.gone
+    .exit
+      i.fa.fa-times.fa-2x
+    .substance
+      h2 This page tells about me.
+  .card.card-2.gone
+    .exit
+      i.fa.fa-times.fa-2x
+    .substance
+      h2 This page tells about my experiences.
+  .card.card-3.gone
+    .exit
+      i.fa.fa-times.fa-2x
+    .substance
+      h2 This page tells about my projects.
 block footer
   .footer
     .copyright

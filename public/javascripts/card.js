@@ -1,41 +1,64 @@
 function changeCards() {
   $("#about").click(function() {
-    $(".card-1").removeClass("hidden");
-    $(".card-2").addClass("hidden");
-    $(".card-3").addClass("hidden");
-    $(".card-4").addClass("hidden");
+    $(".card-1").addClass("enter");
+    $(".card-1").removeClass("gone");
+
+    $(".card-2").addClass("gone");
+    $(".card-2").removeClass("enter");
+
+    $(".card-3").addClass("gone");
+    $(".card-3").removeClass("enter");
   });
 
   $("#experience").click(function() {
-    $(".card-2").removeClass("hidden");
-    $(".card-1").addClass("hidden");
-    $(".card-3").addClass("hidden");
-    $(".card-4").addClass("hidden");
+    $(".card-2").addClass("enter");
+    $(".card-2").removeClass("gone");
+
+    $(".card-1").addClass("gone");
+    $(".card-1").removeClass("enter");
+
+    $(".card-3").addClass("gone");
+    $(".card-3").removeClass("enter");
   });
 
   $("#projects").click(function() {
-    $(".card-3").removeClass("hidden");
-    $(".card-1").addClass("hidden");
-    $(".card-2").addClass("hidden");
-    $(".card-4").addClass("hidden");
+    $(".card-3").addClass("enter");
+    $(".card-3").removeClass("gone");
+
+    $(".card-2").addClass("gone");
+    $(".card-2").removeClass("enter");
+
+    $(".card-1").addClass("gone");
+    $(".card-1").removeClass("enter");
   });
 
   $("#contact").click(function() {
-    $(".card-4").addClass("hidden");
-    $(".card-1").addClass("hidden");
-    $(".card-2").addClass("hidden");
-    $(".card-3").addClass("hidden");
+    $(".card-4").addClass("gone");
+    $(".card-1").addClass("gone");
+    $(".card-2").addClass("gone");
+    $(".card-3").addClass("gone");
 
     $(".nav, .back").addClass("flip");
   });
 
   $(".back-button").click(function() {
-    $(".card-4").addClass("hidden");
-    $(".card-1").addClass("hidden");
-    $(".card-2").addClass("hidden");
-    $(".card-3").addClass("hidden");
+    $(".card-4").addClass("gone");
+    $(".card-1").addClass("gone");
+    $(".card-2").addClass("gone");
+    $(".card-3").addClass("gone");
 
     $(".nav, .back").removeClass("flip");
+  });
+
+  $(".exit").click(function() {
+    $(".card-1").addClass("gone");
+    $(".card-1").removeClass("enter");
+
+    $(".card-2").addClass("gone");
+    $(".card-2").removeClass("enter");
+
+    $(".card-3").addClass("gone");
+    $(".card-3").removeClass("enter");
   })
 }
 

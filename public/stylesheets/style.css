@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  background-color: #e8e8e8;
 }
 
 .footer {
@@ -30,7 +31,7 @@ body {
   border: 1px solid #e1e8ed;
   margin-left: -200vw;
   backface-visibility: hidden;
-  transition: 0.6s;
+  transition: 0.6s ease-out;
 
   background-color: white;
 }
@@ -54,7 +55,17 @@ body {
   text-align: center;
   border-radius: 50%;
 
-  background-color: green;
+  transition: 0.3s;
+  background-color: #e8e8e8;
+}
+
+.buttons > .spacer {
+  opacity: 0;
+  pointer: default
+}
+
+.buttons> .spacer:hover {
+  cursor: default;
 }
 
 .buttons > div {
@@ -64,6 +75,23 @@ body {
 .buttons > div:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+#about:hover {
+  background-color: #C13838;
+}
+
+#experience:hover {
+  background-color: #2274A5;
+}
+
+#projects:hover {
+  background-color: #706DD1;
+}
+
+#contact:hover {
+  background-color: #FFA630;
 }
 
 .copyright {
@@ -77,30 +105,98 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 50px;
   max-width: 1000px;
-  height: 300px;
+  height: 50px;
+  border-radius: 30px;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card.enter {
+  transition:
+    background-color 0.5s 0.5s,
+    margin-top 0.5s,
+    width 0.5s 0.5s,
+    height 0.5s 0.5s,
+    top 0.5s 0.5s;
+  width: 95vw;
+  top: 0px;
+  height: 95vh;
+  margin-left: 0px;
+  padding-top: 5px;
+
+  background-color: white;
+}
+
+.card.gone {
+  transition:
+    margin-top 0.5s 1.0s,
+    width 0.5s 0.5s,
+    height 0.5s 0.5s,
+    top 0.5s 0.5s,
+    background-color 0.5s 0.5s;
+  top: 100px;
+  padding-top: 5px;
+  margin-top: -1000px;
+  width: 50px;
+  height: 50px;
 }
 
 .card > * {
   padding-left: 10px;
   padding-right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card.enter > * {
+  transition:
+    opacity 0.5s 1s;
+  opacity: 1;
+}
+
+.card.gone > * {
+  transition:
+    opacity 0.5s;
+  opacity: 0;
+}
+
+.exit {
+  position: relative;
+  width: 28px;
+}
+
+.exit:hover {
+  cursor: pointer;
 }
 
 .card-1 {
-  background-color: cyan;
+  background-color: #C13838;
+  border: 5px solid #C13838;
+}
+
+.card-1 > .exit {
+  color: #C13838;
 }
 
 .card-2 {
-  background-color: blue;
+  background-color: #2274A5;
+  border: 5px solid #2274A5;
+}
+
+.card-2 > .exit {
+  color: #2274A5;
 }
 
 .card-3 {
-  background-color: purple;
+  background-color: #706DD1;
+  border: 5px solid #706DD1;
 }
 
-.card-4 {
-  background-color: gray;
+.card-3 > .exit {
+  color: #706DD1;
 }
 
 .tooltip {
@@ -225,8 +321,21 @@ body {
   color: black;
 }
 
+.picture {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #e1e8ed;
+}
+
 .info {
   list-style-type: none;
+  padding-left: 0;
+  text-align-last: center;
+}
+
+.substance {
+  text-align: center;
 }
 
 a {
@@ -234,7 +343,6 @@ a {
   color: black;
 }
 
-.hidden {
-  opacity: 0;
-  display:none;
+a:hover {
+  text-decoration: underline;
 }
