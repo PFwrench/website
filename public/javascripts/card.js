@@ -66,6 +66,6 @@ $(function() {
   //$.when()
   $(".nav").animate({
     "margin-left": "0px"
-  }, 1000);
+  }, 800);
   changeCards();
 });

@@ -10,6 +10,15 @@ body {
   background-color: #e8e8e8;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -107,11 +116,18 @@ body {
 .card {
   width: 50px;
   max-width: 1000px;
-  height: 50px;
+  max-height: 50px;
   border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   position: absolute;
   transition: 0.5s;
   z-index: 1;
+  display: block;
+}
+
+.card > .spacer {
+  width: inherit;
+  height: 15px;
 }
 
 .card.enter {
@@ -119,11 +135,12 @@ body {
     background-color 0.5s 0.5s,
     margin-top 0.5s,
     width 0.5s 0.5s,
-    height 0.5s 0.5s,
+    max-height 0.5s 0.5s,
     top 0.5s 0.5s;
   width: 95vw;
   top: 0px;
-  height: 95vh;
+  max-height: 2500px;
+  height: auto;
   margin-left: 0px;
   padding-top: 5px;
 
@@ -134,14 +151,14 @@ body {
   transition:
     margin-top 0.5s 1.0s,
     width 0.5s 0.5s,
-    height 0.5s 0.5s,
+    max-height 0.5s 0.5s,
     top 0.5s 0.5s,
     background-color 0.5s 0.5s;
   top: 100px;
   padding-top: 5px;
   margin-top: -1000px;
   width: 50px;
-  height: 50px;
+  max-height: 50px;
 }
 
 .card > * {
@@ -155,16 +172,19 @@ body {
   transition:
     opacity 0.5s 1s;
   opacity: 1;
+  visibility: visible;
 }
 
 .card.gone > * {
   transition:
     opacity 0.5s;
   opacity: 0;
+  visibility: hidden;
 }
 
 .exit {
   position: relative;
+  display: inline-block;
   width: 28px;
 }
 
@@ -174,29 +194,29 @@ body {
 
 .card-1 {
   background-color: #C13838;
-  border: 5px solid #C13838;
+  border: 3px solid #C13838;
 }
 
 .card-1 > .exit {
-  color: #C13838;
+  color: #e8e8e8;
 }
 
 .card-2 {
   background-color: #2274A5;
-  border: 5px solid #2274A5;
+  border: 3px solid #2274A5;
 }
 
 .card-2 > .exit {
-  color: #2274A5;
+  color: #e8e8e8;
 }
 
 .card-3 {
   background-color: #706DD1;
-  border: 5px solid #706DD1;
+  border: 3px solid #706DD1;
 }
 
 .card-3 > .exit {
-  color: #706DD1;
+  color: #e8e8e8;
 }
 
 .tooltip {
@@ -219,14 +239,12 @@ body {
 
   transform: scale(1);
 
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 
   transition: 0.2s;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   transform: scale(1);
   opacity: 1;
@@ -235,7 +253,7 @@ body {
 .tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
-    bottom: 100%;  /* At the top of the tooltip */
+    bottom: 100%;
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -336,13 +354,14 @@ body {
 
 .substance {
   text-align: center;
+  font-weight: 200;
+  font-size: 18px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
+.substance > a {
   text-decoration: underline;
+}
+
+.resume {
+  color: #C13838;
 }

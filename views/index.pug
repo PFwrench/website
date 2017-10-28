@@ -19,7 +19,7 @@ block content
         span.tooltiptext Contact
       .spacer
   .back
-    img.picture(src='https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-1/p160x160/12313814_1021130574616524_2538527895808493592_n.jpg?oh=fd50e3bc67063df6094e8a4c702d025c&oe=592043EB')
+    img.picture(src='/documents/photo.png')
     ul.info
       li #[i.fa.fa-envelope] : #[a(href='mailto:peter.fwrench@gmail.com') peter.fwrench@gmail.com]
       li #[i.fa.fa-phone] : #[a(href='tel:512-221-0375') (512)221-0375]
@@ -35,19 +35,20 @@ block content
         i.fa.fa-undo.fa-lg
   .card.card-1.gone
     .exit
-      i.fa.fa-times.fa-2x
+      i.fa.fa-times-circle.fa-2x
     .substance
-      h2 This page tells about me.
+      include about.pug
+    .spacer
   .card.card-2.gone
     .exit
-      i.fa.fa-times.fa-2x
+      i.fa.fa-times-circle.fa-2x
     .substance
-      h2 This page tells about my experiences.
+      include experience.pug
   .card.card-3.gone
     .exit
-      i.fa.fa-times.fa-2x
+      i.fa.fa-times-circle.fa-2x
     .substance
-      h2 This page tells about my projects.
+      include projects.pug
 block footer
   .footer
     .copyright
