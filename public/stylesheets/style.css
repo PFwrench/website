@@ -1,5 +1,10 @@
+html {
+  height: 100%;
+}
+
 body {
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
   font: 14px 'Muli', sans-serif;
   font-weight: 200;
   display: flex;
@@ -20,9 +25,24 @@ a:hover {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: center;
-  width: 50%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
 }
 
 .nav {
@@ -38,15 +58,17 @@ a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   border: 1px solid #e1e8ed;
+  background-color: white;
+  transition: 0.6s;
   margin-left: -200vw;
   backface-visibility: hidden;
-  transition: 0.6s ease-out;
-  background-color: white;
+  position: absolute;
 }
 
 .name {
   font-size: 3em;
   font-weight: 200;
+  text-align: center;
 }
 
 .buttons {
@@ -132,7 +154,7 @@ a:hover {
   transition: background-color 0.5s 0.5s, margin-top 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
   width: 95vw;
   top: 0px;
-  max-height: 1800px;
+  max-height: 1500px;
   margin-left: 0px;
   padding-top: 5px;
   background-color: white;
@@ -255,7 +277,6 @@ a:hover {
   background-color: white;
   transition: 0.6s;
   position: absolute;
-  top: 28px;
   backface-visibility: hidden;
   transform: rotateY(-180deg);
 }
@@ -293,10 +314,20 @@ a:hover {
   transform: scale(1.1);
 }
 
+#linkedin>i {
+  position: relative;
+  left: -0.75px;
+}
+
 #linkedin:hover {
   background-color: #0077B5;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
+}
+
+#github>i {
+  position: relative;
+  left: -0.75px;
 }
 
 #github:hover {
@@ -337,6 +368,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.link {
+  color: #2274A5;
+}
+
 .resume {
   color: #C13838;
 }
@@ -345,6 +380,6 @@ a:hover {
   color: #706DD1;
 }
 
-.projects,.experience {
+.projects, .experience, .aboutMe {
   text-align: left;
 }

@@ -1,38 +1,42 @@
 extends layout
 
 block content
-  .nav
-    h1.name Hi. I'm Peter French.
-    .buttons
-      .spacer
-      #about.tooltip
-        i.fa.fa-home.fa-2x(aria-hidden=true)
-        span.tooltiptext About
-      #experience.tooltip
-        i.fa.fa-paper-plane-o.fa-2x(aria-hidden=true)
-        span.tooltiptext Experience
-      #projects.tooltip
-        i.fa.fa-flask.fa-2x(aria-hidden=true)
-        span.tooltiptext Projects
-      #contact.tooltip
-        i.fa.fa-comment-o.fa-2x(aria-hidden=true)
-        span.tooltiptext Contact
-      .spacer
-  .back
-    img.picture(src='/documents/photo.png')
-    ul.info
-      li #[i.fa.fa-envelope(aria-hidden=true)] : #[a(href='mailto:peter.fwrench@gmail.com') peter.fwrench@gmail.com]
-      li #[i.fa.fa-phone(aria-hidden=true)] : #[a(href='tel:512-221-0375') (512)221-0375]
-    .social
-      a#facebook(href='#')
-        i.fa.fa-facebook.fa-lg(aria-hidden=true)
-      a#linkedin(href='#')
-        i.fa.fa-linkedin.fa-lg(aria-hidden=true)
-      a#github(href='#')
-        i.fa.fa-github.fa-lg(aria-hidden=true)
-    .back-button
-      a(href='#')
-        i.fa.fa-undo.fa-lg(aria-hidden=true)
+  .wrapper
+    .nav
+      h1.name Hi. I'm Peter French.
+      .buttons
+        .spacer
+        #about.tooltip
+          i.fa.fa-home.fa-2x(aria-hidden=true)
+          span.tooltiptext About
+        #experience.tooltip
+          i.fa.fa-paper-plane-o.fa-2x(aria-hidden=true)
+          span.tooltiptext Experience
+        #projects.tooltip
+          i.fa.fa-flask.fa-2x(aria-hidden=true)
+          span.tooltiptext Projects
+        #contact.tooltip
+          i.fa.fa-comment-o.fa-2x(aria-hidden=true)
+          span.tooltiptext Contact
+        .spacer
+    .back
+      img.picture(src='/documents/photo.png')
+      ul.info
+        li #[i.fa.fa-envelope(aria-hidden=true)] : #[a(href='mailto:peter.fwrench@gmail.com') peter.fwrench@gmail.com]
+        li #[i.fa.fa-phone(aria-hidden=true)] : #[a(href='tel:512-221-0375') (512)221-0375]
+      .social
+        a#facebook(href='https://www.facebook.com/peter.french.969' target='_blank')
+          i.fa.fa-facebook.fa-lg(aria-hidden=true)
+        a#linkedin(href='https://www.linkedin.com/in/peter-french-a04a31128/' target='_blank')
+          i.fa.fa-linkedin.fa-lg(aria-hidden=true)
+        a#github(href='https://github.com/PFwrench' target='_blank')
+          i.fa.fa-github.fa-lg(aria-hidden=true)
+      .back-button
+        a(href='#')
+          i.fa.fa-undo.fa-lg(aria-hidden=true)
+    .footer
+      .copyright
+        p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
   .card.card-1.gone
     .exit
       i.fa.fa-times-circle.fa-2x(aria-hidden=true)
@@ -51,8 +55,3 @@ block content
     .substance
       include projects.pug
     .spacer
-
-block footer
-  .footer
-    .copyright
-      p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
