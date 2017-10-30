@@ -60,8 +60,12 @@ a:hover {
   border: 1px solid #e1e8ed;
   background-color: white;
   transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
   margin-left: -200vw;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   position: absolute;
 }
 
@@ -85,6 +89,9 @@ a:hover {
   text-align: center;
   border-radius: 50%;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
   background-color: #e8e8e8;
 }
 
@@ -99,6 +106,9 @@ a:hover {
 
 .buttons>div {
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 .buttons>div:hover {
@@ -142,6 +152,9 @@ a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
   z-index: 1;
 }
 
@@ -152,6 +165,9 @@ a:hover {
 
 .card.enter {
   transition: background-color 0.5s 0.5s, margin-top 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
+  -webkit-transition: background-color 0.5s 0.5s, margin-top 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
+  -moz-transition: background-color 0.5s 0.5s, margin-top 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
+  -o-transition: background-color 0.5s 0.5s, margin-top 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
   width: 95vw;
   top: 0px;
   max-height: 1500px;
@@ -162,6 +178,9 @@ a:hover {
 
 .card.gone {
   transition: margin-top 0.5s 1.0s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s, background-color 0.5s 0.5s;
+  -webkit-transition: margin-top 0.5s 1.0s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s, background-color 0.5s 0.5s;
+  -moz-transition: margin-top 0.5s 1.0s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s, background-color 0.5s 0.5s;
+  -o-transition: margin-top 0.5s 1.0s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s, background-color 0.5s 0.5s;
   top: 100px;
   padding-top: 5px;
   margin-top: -1000px;
@@ -174,15 +193,24 @@ a:hover {
   padding-right: 10px;
   opacity: 0;
   transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .card.enter>* {
   transition: opacity 0.5s 1s;
+  -webkit-transition: opacity 0.5s 1s;
+  -moz-transition: opacity 0.5s 1s;
+  -o-transition: opacity 0.5s 1s;
   opacity: 1;
 }
 
 .card.gone>* {
   transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
   opacity: 0;
 }
 
@@ -243,6 +271,10 @@ a:hover {
   position: absolute;
   z-index: 1;
   transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+
 }
 
 .tooltip:hover .tooltiptext {
@@ -276,8 +308,12 @@ a:hover {
   border: 1px solid #e1e8ed;
   background-color: white;
   transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: rotateY(-180deg);
 }
 
@@ -305,6 +341,9 @@ a:hover {
   border-radius: 50%;
   color: white;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
   background-color: #e1e8ed;
 }
 
