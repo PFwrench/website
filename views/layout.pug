@@ -1,7 +1,14 @@
 doctype html
 html
   head
+    script(async, src='https://www.googletagmanager.com/gtag/js?id=UA-108904820-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-108904820-1');
     title= title
+    link(rel='icon', href='/documents/icon.png')
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(href='//fonts.googleapis.com/css?family=Muli:200,400,700', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/stylesheets/style.css')
