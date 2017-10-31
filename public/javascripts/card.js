@@ -59,13 +59,13 @@ function changeCards() {
 
     $(".card-3").addClass("gone");
     $(".card-3").removeClass("enter");
-  })
+  });
 }
 
 $(function() {
-  //$.when()
-  $(".nav").animate({
-    "margin-left": "0px"
-  }, 800);
+  $(".blog").addClass("here");
+  
+  $(".nav").addClass("enter");
+  $(".nav2").addClass("enter");
   changeCards();
 });
