@@ -12,8 +12,8 @@ $(function () {
       console.log('ON LEFT');
       $(".blog").removeClass("here");
       $(".blog").addClass("gone");
-      $(".nav2").removeClass("enter");
-      $(".nav2").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
+      $(".posts>*").removeClass("enter");
+      $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
         window.location.replace("http://localhost:3000");
       });
     }

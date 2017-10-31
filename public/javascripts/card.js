@@ -64,8 +64,9 @@ function changeCards() {
 
 $(function() {
   $(".blog").addClass("here");
-  
+
   $(".nav").addClass("enter");
   $(".nav2").addClass("enter");
+  $(".posts>*").addClass("enter");
   changeCards();
 });
