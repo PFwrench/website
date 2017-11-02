@@ -20,8 +20,10 @@
   border: 1px solid #e1e8ed;
   background-color: white;
 
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   margin: 5px;
 
@@ -34,7 +36,14 @@
 }
 
 .post>.title {
-  min-width: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #e8e8e8;
+  border-radius: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .post>.details {
   display: flex;
@@ -45,9 +54,12 @@
 .title>.title-text {
   font-weight: 200;
   margin-bottom: 3px;
+
+
 }
 .title>.title-date {
   margin-top: 3px;
+  color: #9E9EA6;
 }
 
 .details>.description {
