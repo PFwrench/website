@@ -32,6 +32,7 @@ a:hover {
   left: 0;
   display: flex;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .blog.onRight {
@@ -40,20 +41,6 @@ a:hover {
 
 .blog.onLeft {
   justify-content: flex-start;
-}
-
-.nav2 {
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transform: translateX(200vw);
-  position: absolute;
-}
-
-.nav2.enter {
-  transition: transform 0.5s;
-  transform: translateX(0px);
 }
 
 .blog.gone {

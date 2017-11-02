@@ -5,7 +5,19 @@ block content
     .blog.onLeft.gone
       a(href='#')
         p #[i.fa.fa-arrow-left] To info
-    h1.nav2 This is the blog of my site
+    .posts
+      if postsInfo.length > 0
+        each post in postsInfo
+          .post
+            .title
+              h1.title-text= post.title
+              p.title-date= post.dateString
+            .details
+              p.description= post.description
+      else
+        .none.gone
+          h1 There are no posts!
+          p Come back another time and there may be some content.
     .footer
       .copyright
         p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
