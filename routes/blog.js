@@ -9,7 +9,8 @@ var mkdirp = require('mkdirp');
 var path = require('path');
 
 var src = './posts/';
-var dest = './public/';
+var dest = '/public/p/';
+var linkDest = '/p/'
 
 var posts = [];
 
@@ -33,13 +34,13 @@ fs.readdir(src, function(err, list) {
           var dateobj = new Date(date);
           var pth = dateobj.getFullYear() + "/" + dateobj.getMonth() + "/" + dateobj.getDate() + "/";
 
-          meta.path = "/" + pth;
+          meta.path = linkDest + pth;
           meta.dateString = date;
           posts.push(meta);
 
-          mkdirp(dest + pth, function (err) {
+          mkdirp("./" + dest + pth, function (err) {
             if (err) console.log(err);
-            fs.writeFile(__dirname + "/." + dest + pth + "index.html", renderedPost, function(err) {
+            fs.writeFile(__dirname + "/.." + dest + pth + "index.html", renderedPost, function(err) {
               if (err) {
                 console.log("ERROR in " + __dirname + " : "+ err);
               }
