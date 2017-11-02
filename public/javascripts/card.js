@@ -59,13 +59,22 @@ function changeCards() {
 
     $(".card-3").addClass("gone");
     $(".card-3").removeClass("enter");
-  })
+  });
 }
 
 $(function() {
-  //$.when()
-  $(".nav").animate({
-    "margin-left": "0px"
-  }, 800);
+  $(".blog").addClass("here");
+  $(".none").removeClass("gone");
+
+  $(".nav").addClass("enter");
+  var posts = $(".post");
+  var i = 0;
+  var staggerPostAnimations = function() {
+    $(posts[i++]).addClass("enter");
+    if (i < posts.length) {
+      setTimeout(staggerPostAnimations, 75);
+    }
+  }
+  staggerPostAnimations();
   changeCards();
 });
