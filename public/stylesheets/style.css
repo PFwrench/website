@@ -43,6 +43,10 @@ a:hover {
   justify-content: flex-start;
 }
 
+.blog.onMiddle {
+  justify-content: center;
+}
+
 .blog.gone {
   transition: opacity 0.5s;
   opacity: 0;

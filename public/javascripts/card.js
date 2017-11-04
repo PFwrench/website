@@ -65,6 +65,7 @@ function changeCards() {
 $(function() {
   $(".blog").addClass("here");
   $(".none").removeClass("gone");
+  $(".postContent").addClass("enter");
 
   $(".nav").addClass("enter");
   var posts = $(".post");
