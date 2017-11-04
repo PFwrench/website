@@ -98,13 +98,23 @@ function writeMdToFile(file, dest) {
   return new Promise((resolve, reject) => {
       fs.writeFile(appRoot + dest + file.innerPath + "index.html", file.__content, function(err) {
         if (err) reject(err);
-        resolve("SUCCESS");
+        resolve(file);
       });
   });
 }
 
+function sortFiles(files) {
+  return new Promise((resolve, reject) => {
+    _.sortBy(files, function(post) {
+      return new Date(post.date).getTime();
+    }).reverse();
+
+    resolve(files);
+  });
+}
+
 function populate(src, dest, linkDest) {
-  readDirectory(src)
+  return readDirectory(src)
     .then((list) => {
       return readFiles(list, src);
     }).then((data) => {
@@ -113,6 +123,10 @@ function populate(src, dest, linkDest) {
       return makePostFilePath(files, dest);
     }).then((files) => {
       return writeMdToFiles(files, dest);
+    }).then((files) => {
+      return sortFiles(files);
+    }).then((files) => {
+      return files;
     }).catch((err) =>{
       console.log(err);
     });
