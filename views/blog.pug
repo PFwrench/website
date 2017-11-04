@@ -14,7 +14,7 @@ block content
               p.title-date= post.dateString
             .details
               p.description= post.description
-            a(href= post.path) Link to article >
+            a.articleLink(data= post.path, href='#') Link to article >
       else
         .none.gone
           h1 There are no posts!

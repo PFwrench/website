@@ -5,6 +5,7 @@ var mkdirp = require('mkdirp');
 var path = require('path');
 var _ = require('underscore');
 var appRoot = require('app-root-path');
+var pug = require('pug');
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -62,7 +63,12 @@ function loadMetaData(files, linkDest) {
         meta.path = linkDest + pth;
         meta.innerPath = pth;
         meta.dateString = date;
-        meta.__content = md.render(meta.__content);
+
+        var html = pug.renderFile(appRoot + "/views/post.pug", {
+          post: md.render(meta.__content)
+        });
+        console.log(html);
+        meta.__content = html
         files[i] = meta;
       }
 
@@ -126,6 +132,7 @@ function populate(src, dest, linkDest) {
     }).then((files) => {
       return sortFiles(files);
     }).then((files) => {
+      console.log(files);
       return files;
     }).catch((err) =>{
       console.log(err);

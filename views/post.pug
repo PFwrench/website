@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .wrapper
+    .blog.onMiddle.gone
+      a(href='#')
+        p To posts #[i.fa.fa-arrow-up]
+    .postContent!= post
+    .footer
+      .copyright
+        p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
