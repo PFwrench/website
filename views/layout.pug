@@ -12,17 +12,19 @@ html
     link(rel='icon', href='/documents/icon.png')
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(href='//fonts.googleapis.com/css?family=Muli:200,400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/blog.css')
     link(rel='stylesheet', href='/stylesheets/post.css')
+    link(rel='stylesheet', href='/misc/highlight/styles/github.css')
     meta(charset='UTF-8')
     meta(name='author', content='Peter French')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js")
     script(src='/javascripts/card.js')
     script(src='/javascripts/toggleBlog.js')
+    script(src='/misc/highlight/highlight.pack.js')
   body
     noscript
-      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NSCV792', height='0', width='0' style='display:none;visibility:hidden')
+      iframe(src='//www.googletagmanager.com/ns.html?id=GTM-NSCV792', height='0', width='0' style='display:none;visibility:hidden')
     block content

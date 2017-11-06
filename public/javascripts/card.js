@@ -65,15 +65,18 @@ function changeCards() {
 $(function() {
   $(".blog").addClass("here");
   $(".none").removeClass("gone");
+
+  $(".titleCard").addClass("enter");
   $(".postContent").addClass("enter");
 
   $(".nav").addClass("enter");
+  $(".back").addClass("enter");
   var posts = $(".post");
   var i = 0;
   var staggerPostAnimations = function() {
     $(posts[i++]).addClass("enter");
     if (i < posts.length) {
-      setTimeout(staggerPostAnimations, 75);
+      setTimeout(staggerPostAnimations, 100);
     }
   }
   staggerPostAnimations();
