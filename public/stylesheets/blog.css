@@ -27,12 +27,26 @@
 
   margin: 5px;
 
-  transition: transform 0.5s, opacity 0.5s;
-  transform: translateX(50px);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transform: translateX(50px) scale(1);
   opacity: 0;
 
   display: flex;
   flex-direction: row;
+}
+
+.post.enter:hover {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+
+  cursor: pointer;
 }
 
 .post>.title, .titleCard>.title {
@@ -79,12 +93,18 @@
 
 .post.enter {
   transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition: transform 0.5s, opacity 0.5s;
+  -moz-transition: transform 0.5s, opacity 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
   transform: translateX(0px);
   opacity: 1;
 }
 
 .post.viewPost{
   transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition: transform 0.5s, opacity 0.5s;
+  -moz-transition: transform 0.5s, opacity 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
   transform: translateY(-50px);
   opacity: 0;
 }

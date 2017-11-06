@@ -8,13 +8,12 @@ block content
     .posts
       if postsInfo.length > 0
         each post in postsInfo
-          .post
+          .post(data= post.path)
             .title
               h1.title-text= post.title
               p.title-date= post.dateString
             .details
               p.description= post.description
-            a.articleLink(data= post.path, href='#') Link to article >
       else
         .none.gone
           h1 There are no posts!
