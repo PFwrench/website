@@ -2,6 +2,7 @@ $(function () {
   $('.blog.onRight').click(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
+    $(".back").removeClass("enter");
     $(".nav").removeClass("enter");
     $(".nav").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000/blog");
@@ -19,6 +20,7 @@ $(function () {
   $('.blog.onMiddle').click(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
+    $(".titleCard").removeClass("enter");
     $(".postContent").removeClass("enter");
     $(".postContent").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000/blog");
@@ -29,7 +31,7 @@ $(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".none").addClass("gone");
-    $(".posts>*").removeClass("enter");
+    $(".posts>*").addClass("viewPost");
     var link = $(event.target).attr('data');
     $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000" + link);

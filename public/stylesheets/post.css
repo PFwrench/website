@@ -1,4 +1,6 @@
-.postContent {
+.titleCard {
+  box-sizing: inherit;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   border: 1px solid #e1e8ed;
@@ -12,9 +14,40 @@
   transition: transform 0.5s, opacity 0.5s;
   transform: translateY(50px);
   opacity: 0;
+
+  max-width: 1000px;
+  width: 95%;
 }
 
-.postContent.enter {
+.postContent {
+  box-sizing: inherit;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid #e1e8ed;
+  background-color: white;
+
+  margin-top: 10px;
+
+  padding: 20px 5vw;
+
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateY(50px);
+  opacity: 0;
+
+  max-width: 1000px;
+  width: 95%;
+}
+
+.postContent.enter, .titleCard.enter {
   opacity: 1;
   transform: translateY(0px);
+}
+
+.titleCard>.title {
+  font-size: 2em;
+}
+
+.postPage {
+  position: static;
 }

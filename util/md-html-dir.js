@@ -65,9 +65,11 @@ function loadMetaData(files, linkDest) {
         meta.dateString = date;
 
         var html = pug.renderFile(appRoot + "/views/post.pug", {
+          title: meta.title,
+          description: meta.description,
+          date: meta.dateString,
           post: md.render(meta.__content)
         });
-        console.log(html);
         meta.__content = html
         files[i] = meta;
       }
@@ -132,7 +134,6 @@ function populate(src, dest, linkDest) {
     }).then((files) => {
       return sortFiles(files);
     }).then((files) => {
-      console.log(files);
       return files;
     }).catch((err) =>{
       console.log(err);

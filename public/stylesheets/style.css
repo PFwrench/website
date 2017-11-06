@@ -11,7 +11,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
   background-color: #e8e8e8;
 }
 
@@ -67,12 +67,13 @@ a:hover {
 }
 
 .wrapper {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 95%;
-  height: 100%;
+  min-height: 100vh;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
@@ -350,20 +351,28 @@ a:hover {
   border: 1px solid #e1e8ed;
   background-color: white;
   transition: 0.6s;
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -o-transition: 0.6s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
   position: absolute;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: rotateY(-180deg);
+  transform: rotateY(-180deg) translateX(150vw);
+}
+
+.back.enter {
+  transform: rotateY(-180deg) translateX(0vw);
 }
 
 .nav.enter.flip {
   transform: rotateY(-180deg);
 }
 
-.back.flip {
+.back.enter.flip {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
   transform: rotateY(0deg);
 }
 
