@@ -68,6 +68,9 @@ function loadMetaData(files, linkDest) {
           title: meta.title,
           description: meta.description,
           date: meta.dateString,
+          year: dateobj.getFullYear(),
+          month: dateobj.getMonth() + 1,
+          day: dateobj.getDate(),
           post: md.render(meta.__content)
         });
         meta.__content = html
