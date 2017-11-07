@@ -1,6 +1,6 @@
 ---
-title: Test post
-description: This is a test description
+title: Creating a personal website from the top down
+description: I created a personal website with the goal of simplicity and design in mind. 10 minute read
 date: 10 10 2017
 ---
 An h1 header
