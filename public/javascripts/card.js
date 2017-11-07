@@ -68,6 +68,7 @@ $(function() {
 
   $(".titleCard").addClass("enter");
   $(".postContent").addClass("enter");
+  $(".share").addClass("enter");
 
   $(".nav").addClass("enter");
   $(".back").addClass("enter");

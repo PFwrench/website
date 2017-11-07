@@ -49,15 +49,14 @@
   cursor: pointer;
 }
 
-.post>.title, .titleCard>.title {
+.post>.title{
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 2px solid #e8e8e8;
-  border-radius: 5px;
+  border-right: 1px solid #e8e8e8;
 
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 25px;
 }
 .post>.details, .titleCard>.details {
   display: flex;
@@ -68,8 +67,6 @@
 .title>.title-text{
   font-weight: 200;
   margin-bottom: 3px;
-
-
 }
 .title>.title-date {
   margin-top: 3px;

@@ -21,6 +21,7 @@ $(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".titleCard").removeClass("enter");
+    $(".share").removeClass("enter");
     $(".postContent").removeClass("enter");
     $(".postContent").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000/blog");

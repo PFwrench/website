@@ -8,10 +8,21 @@ block content
     .titleCard
       .title
         h1.title-text= title
-        p.title-date= dateString
+        p.title-date= date
+      .line
       .details
         p.description= description
     .postContent.markdown-body!= post
+    .share
+      .shareText
+        h3 Share
+      .shareFB
+        .fb-share-button(data-href='https://fwren.ch' data-layout='button' data-size='small' data-mobile-iframe='true')
+          a.fb-xfbml-parse-ignore(target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffwren.ch%2F' + year + '%2F' + month + '%2F' + day + '%2F&amp;src=sdkpreparse') Share
+      .shareTwitter
+      .shareLinkedIn
+      .shareLink
+      .shareReddit
     .footer.postPage
       .copyright
         p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
