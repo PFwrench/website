@@ -42,5 +42,27 @@ $(function () {
     $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000" + link);
     });
-  })
+  });
+
+  var clipboard = new Clipboard("#link");
+
+  clipboard.on("success", function(e) {
+    $(".successBubble").addClass("clicked");
+    setTimeout(function () {
+      $(".successBubble").addClass("gone");
+      setTimeout(function() {
+        $(".successBubble").removeClass("clicked gone");
+      }, 400);
+    }, 400);
+  });
+
+  clipboard.on("error", function(e) {
+    $(".errorBubble").addClass("clicked");
+    setTimeout(function () {
+      $(".errorBubble").addClass("gone");
+      setTimeout(function() {
+        $(".errorBubble").removeClass("clicked gone");
+      }, 400);
+    }, 400);
+  });
 });

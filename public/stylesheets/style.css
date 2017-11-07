@@ -303,6 +303,7 @@ a:hover {
 }
 
 .tooltip .tooltiptext {
+  visibility: hidden;
   background-color: #e1e8ed;
   color: black;
   text-align: center;
@@ -320,10 +321,10 @@ a:hover {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
-
 }
 
 .tooltip:hover .tooltiptext {
+  visibility: visible;
   transform: scale(1);
   opacity: 1;
 }
@@ -407,6 +408,16 @@ a:hover {
   transform: scale(1.1);
 }
 
+#twitter>i {
+  position: relative;
+  left: -0.75px;
+}
+#twitter:hover {
+  background-color: #00aced;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 #linkedin>i {
   position: relative;
   left: -0.75px;
@@ -427,6 +438,84 @@ a:hover {
   background-color: gray;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
+}
+
+#reddit>i {
+  position: relative;
+  left: -2.6px;
+}
+#reddit:hover {
+  background-color: #FF5700;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+#link>i {
+  position: relative;
+  left: -2px;
+}
+#link:hover {
+  cursor: pointer;
+  background-color: #00e600;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.tooltip .successBubble {
+  visibility: hidden;
+  background-color: #00e600;
+  color: white;
+  text-align: center;
+  padding: 0px 0;
+  border-radius: 6px;
+  opacity: 0;
+  width: 60px;
+  top: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  z-index: 1;
+  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.tooltip .successBubble.clicked {
+  visibility: visible;
+  transform: translateY(-30px) ;
+  opacity: 1;
+}
+.tooltip .successBubble.clicked.gone {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tooltip .errorBubble {
+  visibility: hidden;
+  background-color: #C13838;
+  color: black;
+  text-align: center;
+  padding: 0px 0;
+  border-radius: 6px;
+  opacity: 0;
+  width: 60px;
+  top: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  z-index: 1;
+  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.tooltip .errorBubble.clicked {
+  visibility: visible;
+  transform: translateY(-30px) ;
+  opacity: 1;
+}
+.tooltip .errorBubble.clicked.gone {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .fa-lg {

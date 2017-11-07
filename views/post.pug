@@ -16,13 +16,20 @@ block content
     .share
       .shareText
         h3 Share
-      .shareFB
-        .fb-share-button(data-href='https://fwren.ch' data-layout='button' data-size='small' data-mobile-iframe='true')
-          a.fb-xfbml-parse-ignore(target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffwren.ch%2F' + year + '%2F' + month + '%2F' + day + '%2F&amp;src=sdkpreparse') Share
-      .shareTwitter
-      .shareLinkedIn
-      .shareLink
-      .shareReddit
+      .shareButtons
+        a.sharebutton.shareFB#facebook(href="//www.facebook.com/sharer/sharer.php?u=http%3A//fwren.ch" + path, target="_blank")
+          i.fa.fa-facebook.fa-lg(aria-hidden=true)
+        a.sharebutton.shareTwitter#twitter(href="//twitter.com/home?status=http%3A//fwren.ch" + path, target="_blank")
+          i.fa.fa-twitter.fa-lg(aria-hidden=true)
+        a.sharebutton.shareLinkedIn#linkedin(href="//www.linkedin.com/shareArticle?mini=true&url=http%3A//fwren.ch/ " + path + "&title=" + title + "&summary=" + description + "&source=", target="_blank")
+          i.fa.fa-linkedin.fa-lg(aria-hidden=true)
+        a.sharebutton.shareReddit#reddit(href="//www.reddit.com/submit", onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false", target="_blank")
+          i.fa.fa-reddit-alien.fa-lg(aria-hidden=true)
+        a.sharebutton.shareLink#link.tooltip(data-clipboard-text="http://fwren.ch" + path)
+          i.fa.fa-link.fa-lg(aria-hidden=true)
+          span.tooltiptext Copy to clipboard
+          span.successBubble Success
+          span.errorBubble Error :/
     .footer.postPage
       .copyright
         p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
