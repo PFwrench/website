@@ -27,6 +27,7 @@ a:hover {
 .blog {
   color: #9E9EA6;
   position: absolute;
+  width: 100%;
   top: 0;
   right: 0;
   left: 0;
@@ -41,6 +42,7 @@ a:hover {
 
 .blog.onLeft {
   justify-content: flex-start;
+  position: static;
 }
 
 .blog.onMiddle {
@@ -69,15 +71,15 @@ a:hover {
 .wrapper {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 95%;
   min-height: 100vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 100%;
+  padding: 0 10px;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .nav {
@@ -538,6 +540,16 @@ a:hover {
   list-style-type: none;
   padding-left: 0;
   text-align-last: center;
+}
+
+.businessCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
 }
 
 .substance {

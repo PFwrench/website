@@ -93,6 +93,10 @@
   opacity: 0;
 }
 
+.blogFoot {
+  position: static;
+}
+
 .post.enter {
   transition: transform 0.5s, opacity 0.5s;
   -webkit-transition: transform 0.5s, opacity 0.5s;
