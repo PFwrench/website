@@ -14,7 +14,7 @@ function readDirectory(src) {
   return new Promise((resolve, reject) => {
     fs.readdir(src, (err, list) => {
       if (err) {
-        reject(Error("Source directory doesn't exist: " + err));
+        reject("readDirectory: " + err);
       } else {
         resolve(list);
       }
@@ -36,7 +36,7 @@ function readFile(name) {
   return new Promise((resolve, reject) => {
     fs.readFile(name, (err, data) => {
       if (err) {
-        reject("Source file " + name + " cannot be read: " + err);
+        reject("readFile: " +  err);
       } else {
         resolve(data);
       }
@@ -80,19 +80,27 @@ function loadMetaData(files, linkDest) {
 
       resolve(files);
     } catch(e) {
-      reject("ERROR IN LOAD METADATA: " + e);
+      reject("loadMetaData: " + e);
     }
   });
 }
 
-function makePostFilePath(files, dest) {
+function makePostFilePaths(files, dest) {
+  var ps = [];
+
+  for (var i = 0; i < files.length; i++) {
+    ps.push(makePostFilePath(files[i], dest));
+  }
+
+  return Promise.all(ps);
+}
+
+function makePostFilePath(file, dest) {
   return new Promise((resolve, reject) => {
-    for (var i = 0; i < files.length; i++) {
-      mkdirp(appRoot + dest + files[i].innerPath, function (err) {
-        if (err) reject(err);
-        resolve(files);
-      });
-    }
+    mkdirp(appRoot + dest + file.innerPath, (err) => {
+      if (err) reject("makePostFilePath: " + err);
+      resolve(file);
+    });
   });
 }
 
@@ -109,7 +117,7 @@ function writeMdToFiles(files, dest) {
 function writeMdToFile(file, dest) {
   return new Promise((resolve, reject) => {
       fs.writeFile(appRoot + dest + file.innerPath + "index.html", file.__content, function(err) {
-        if (err) reject(err);
+        if (err) reject("writeMdtoFile: " + err);
         resolve(file);
       });
   });
@@ -132,7 +140,7 @@ function populate(src, dest, linkDest) {
     }).then((data) => {
       return loadMetaData(data, linkDest);
     }).then((files) => {
-      return makePostFilePath(files, dest);
+      return makePostFilePaths(files, dest);
     }).then((files) => {
       return writeMdToFiles(files, dest);
     }).then((files) => {
@@ -146,6 +154,6 @@ function populate(src, dest, linkDest) {
 
 module.exports = {
   populate: function(src, dest, linkDest) {
-    return populate(src, dest, linkDest);
+    return populate(src, dest + '/', linkDest);
   }
 }
