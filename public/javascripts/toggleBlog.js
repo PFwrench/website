@@ -5,7 +5,7 @@ $(function () {
       $(".blog").addClass("gone");
       $(".nav").removeClass("enter");
       $(".nav").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-        window.location.replace("http://localhost:3000/blog");
+        window.location.replace("//fwren.ch:3000/blog");
       });
     } else {
       $(".blog").removeClass("here");
@@ -13,7 +13,7 @@ $(function () {
       $(".none").addClass("gone");
       $(".posts>*").removeClass("enter");
       $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-        window.location.replace("http://localhost:3000");
+        window.location.replace("//fwren.ch");
       });
     }
   });
