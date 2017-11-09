@@ -210,8 +210,8 @@ a:hover {
   -o-transition: background-color 0.5s 0.5s, transform 0.5s, width 0.5s 0.5s, max-height 0.5s 0.5s, top 0.5s 0.5s;
 
   width: 95vw;
-  top: 0px;
-  max-height: 1000px;
+  top: 10vh;
+  max-height: 1300px;
 
   transform: translateY(0px);
   background-color: white;
