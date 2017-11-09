@@ -10,7 +10,6 @@ var pug = require('pug');
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function readDirectory(src) {
-  // Returns a new promise
   return new Promise((resolve, reject) => {
     fs.readdir(src, (err, list) => {
       if (err) {
