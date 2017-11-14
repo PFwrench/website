@@ -5,9 +5,14 @@
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
+  /*-webkit-box-pack: center;*/
+  -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+
+  -webkit-flex: 0;
+  flex-shrink: 0;
 }
 
 .titleCard {
@@ -31,13 +36,19 @@
   opacity: 0;
 
   max-width: 1000px;
+  height: auto;
 
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
+
+  -webkit-flex: 0;
+  flex-shrink: 0;
+
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -52,6 +63,9 @@
   margin: 10px 0px;
 
   padding: 20px 5vw;
+
+  -webkit-flex: 0;
+  flex-shrink: 0;
 
   transition: transform 0.5s, opacity 0.5s;
   -webkit-transition: transform 0.5s, opacity 0.5s;
@@ -116,6 +130,7 @@
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
   flex-direction: row;
+  -webkit-box-align: center;
   align-items: center;
   justify-content: center;
 }
