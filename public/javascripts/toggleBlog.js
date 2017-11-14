@@ -1,5 +1,5 @@
 $(function () {
-  $('.blog.onRight').click(function () {
+  $('.blog.onRight > a').click(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".back").removeClass("enter");
@@ -8,7 +8,7 @@ $(function () {
       window.location.replace("http://localhost:3000/blog");
     });
   });
-  $('.blog.onLeft').click(function () {
+  $('.blog.onLeft > a').click(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".none").addClass("gone");
@@ -17,7 +17,7 @@ $(function () {
       window.location.replace("http://localhost:3000");
     });
   });
-  $('.blog.onMiddle').click(function () {
+  $('.blog.onMiddle > a').click(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".titleCard").removeClass("enter");
@@ -33,15 +33,25 @@ $(function () {
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".none").addClass("gone");
-    $(".posts>*").addClass("viewPost");
+    $(".posts>*").addClass("viewPost killMouse");
     var link = $(event.target).attr("data");
-    console.log(event.target);
+    var $elem = $(event.target);
     if (link == undefined) {
       link = $(event.target).closest(".post").attr("data");
+      $elem = $elem.closest(".post");
     }
+    $elem.addClass("postClicked");
     $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
       window.location.replace("http://localhost:3000" + link);
     });
+  });
+
+  $(".post").hover(function() {
+    $(this).addClass("hover");
+  }, function() {
+    if (!$(this).hasClass("postClicked")) {
+      $(this).removeClass("hover");
+    }
   });
 
   var clipboard = new Clipboard("#link");

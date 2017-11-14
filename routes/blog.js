@@ -17,19 +17,10 @@ clean.clear(dest).then(() => {
   posts = data;
 });
 
-fs.watch(src, function(e, filename) {
-  console.log("New file detected: " + filename);
-  clean.clear(dest).then(() => {
-    return mdhtml.populate(src, dest, linkDest);
-  }).then((data) => {
-    posts = data;
-  });
-});
-
 /* GET blog page */
 router.get('/', function(req, res, next) {
   res.render('blog', {
-    title: 'Blog',
+    title: 'Peter French - Blog',
     postsInfo: posts
   });
 });

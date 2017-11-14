@@ -5,31 +5,36 @@ block content
     .blog.onMiddle.gone.postPage
       a(href='#')
         p To posts #[i.fa.fa-arrow-up]
-    .titleCard
-      .title
-        h1.title-text= title
-        p.title-date= date
-      .line
-      .details
-        p.description= description
-    .postContent.markdown-body!= post
-    .share
-      .shareText
-        h3 Share
-      .shareButtons
-        a.sharebutton.shareFB#facebook(href="//www.facebook.com/sharer/sharer.php?u=http%3A//fwren.ch" + path, target="_blank")
-          i.fa.fa-facebook.fa-lg(aria-hidden=true)
-        a.sharebutton.shareTwitter#twitter(href="//twitter.com/home?status=http%3A//fwren.ch" + path, target="_blank")
-          i.fa.fa-twitter.fa-lg(aria-hidden=true)
-        a.sharebutton.shareLinkedIn#linkedin(href="//www.linkedin.com/shareArticle?mini=true&url=http%3A//fwren.ch/ " + path + "&title=" + title + "&summary=" + description + "&source=", target="_blank")
-          i.fa.fa-linkedin.fa-lg(aria-hidden=true)
-        a.sharebutton.shareReddit#reddit(href="//www.reddit.com/submit", onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false", target="_blank")
-          i.fa.fa-reddit-alien.fa-lg(aria-hidden=true)
-        a.sharebutton.shareLink#link.tooltip(data-clipboard-text="http://fwren.ch" + path)
-          i.fa.fa-link.fa-lg(aria-hidden=true)
-          span.tooltiptext Copy to clipboard
-          span.successBubble Success
-          span.errorBubble Error :/
+    .contentCards
+      .titleCard
+        .title
+          h1.title-text= title
+          p.title-date= date
+        .line
+        .details
+          p.description= description
+      .postContent.markdown-body!= post
+      .share
+        .shareText
+          h3 Share
+        .shareButtons
+          a.sharebutton.shareFB#facebook(href="//www.facebook.com/sharer/sharer.php?u=http%3A//fwren.ch" + path, target="_blank")
+            i.fa.fa-facebook.fa-lg(aria-hidden=true)
+          a.sharebutton.shareTwitter#twitter(href="//twitter.com/home?status=http%3A//fwren.ch" + path, target="_blank")
+            i.fa.fa-twitter.fa-lg(aria-hidden=true)
+          a.sharebutton.shareLinkedIn#linkedin(href="//www.linkedin.com/shareArticle?mini=true&url=http%3A//fwren.ch/ " + path + "&title=" + title + "&summary=" + description + "&source=", target="_blank")
+            i.fa.fa-linkedin.fa-lg(aria-hidden=true)
+          a.sharebutton.shareReddit#reddit(href="//www.reddit.com/submit", onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false", target="_blank")
+            i.fa.fa-reddit-alien.fa-lg(aria-hidden=true)
+          a.sharebutton.shareLink#link.tooltip(data-clipboard-text="http://fwren.ch" + path)
+            i.fa.fa-link.fa-lg(aria-hidden=true)
+            span.tooltiptext Copy link
+            span.successBubble Success
+            span.errorBubble Error :/
+        .shareAuthor
+          a.aboutAuthor.tooltip(href="/")
+              img.picture.small(src='/documents/photo.png')
+              span.tooltiptext About Me
     .footer.postPage
       .copyright
         p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017
