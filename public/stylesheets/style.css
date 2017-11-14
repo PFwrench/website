@@ -90,6 +90,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  max-width: 100% !important;
   min-height: 100vh;
   height: 100%;
   padding: 0 10px;
