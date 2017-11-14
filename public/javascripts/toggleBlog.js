@@ -5,7 +5,7 @@ $(function () {
     $(".back").removeClass("enter");
     $(".nav").removeClass("enter");
     $(".nav").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-      window.location.replace("http://localhost:3000/blog");
+      window.location.replace("http://fwren.ch/blog");
     });
   });
   $('.blog.onLeft > a').click(function () {
@@ -14,7 +14,7 @@ $(function () {
     $(".none").addClass("gone");
     $(".posts>*").removeClass("enter");
     $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-      window.location.replace("http://localhost:3000");
+      window.location.replace("http://fwren.ch");
     });
   });
   $('.blog.onMiddle > a').click(function () {
@@ -24,7 +24,7 @@ $(function () {
     $(".share").removeClass("enter");
     $(".postContent").removeClass("enter");
     $(".postContent").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-      window.location.replace("http://localhost:3000/blog");
+      window.location.replace("http://fwren.ch/blog");
     });
   });
 
@@ -42,7 +42,7 @@ $(function () {
     }
     $elem.addClass("postClicked");
     $(".posts>*").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-      window.location.replace("http://localhost:3000" + link);
+      window.location.replace("http://fwren.ch" + link);
     });
   });
 
