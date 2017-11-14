@@ -1,5 +1,7 @@
 $(function () {
-  $('.blog.onRight > a').click(function () {
+  $('.blog.onRight > a').click(function (event) {
+    event.preventDefault();
+
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".back").removeClass("enter");
@@ -8,7 +10,9 @@ $(function () {
       window.location.replace("http://fwren.ch/blog");
     });
   });
-  $('.blog.onLeft > a').click(function () {
+  $('.blog.onLeft > a').click(function (event) {
+    event.preventDefault();
+
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".none").addClass("gone");
@@ -17,7 +21,9 @@ $(function () {
       window.location.replace("http://fwren.ch");
     });
   });
-  $('.blog.onMiddle > a').click(function () {
+  $('.blog.onMiddle > a').click(function (event) {
+    event.preventDefault();
+
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
     $(".titleCard").removeClass("enter");
@@ -29,6 +35,8 @@ $(function () {
   });
 
   $('.post').click(function (event) {
+    event.preventDefault();
+    
     if (!event) event = window.event;
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");
