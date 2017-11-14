@@ -8,7 +8,7 @@ block content
     .posts
       if postsInfo.length > 0
         each post in postsInfo
-          .post
+          .post(data= post.path)
             .title
               h1.title-text= post.title
               p.title-date= post.dateString
@@ -18,6 +18,6 @@ block content
         .none.gone
           h1 There are no posts!
           p Come back another time and there may be some content.
-    .footer
+    .footer.blogFoot
       .copyright
         p #[i.fa.fa-copyright(aria-hidden=true)] Peter French 2017

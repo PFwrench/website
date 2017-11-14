@@ -11,7 +11,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
   background-color: #e8e8e8;
 }
 
@@ -26,7 +26,7 @@ a:hover {
 
 .blog {
   color: #9E9EA6;
-  position: absolute;
+  width: 100%;
   top: 0;
   right: 0;
   left: 0;
@@ -41,6 +41,11 @@ a:hover {
 
 .blog.onLeft {
   justify-content: flex-start;
+  position: static;
+}
+
+.blog.onMiddle {
+  justify-content: center;
 }
 
 .blog.gone {
@@ -54,7 +59,6 @@ a:hover {
 }
 
 .footer {
-  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
@@ -63,20 +67,22 @@ a:hover {
 }
 
 .wrapper {
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+  min-height: 100vh;
   height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0 10px;
   position: relative;
-  overflow-x: hidden;
+
+  overflow: hidden;
 }
 
 .nav {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -122,7 +128,6 @@ a:hover {
 }
 
 .buttons>* {
-  height: 100%;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
@@ -295,6 +300,7 @@ a:hover {
 }
 
 .tooltip .tooltiptext {
+  visibility: hidden;
   background-color: #e1e8ed;
   color: black;
   text-align: center;
@@ -312,10 +318,10 @@ a:hover {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
-
 }
 
 .tooltip:hover .tooltiptext {
+  visibility: visible;
   transform: scale(1);
   opacity: 1;
 }
@@ -332,7 +338,7 @@ a:hover {
 }
 
 .back {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -346,20 +352,28 @@ a:hover {
   border: 1px solid #e1e8ed;
   background-color: white;
   transition: 0.6s;
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -o-transition: 0.6s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
   position: absolute;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: rotateY(-180deg);
+  transform: rotateY(-180deg) translateX(150vw);
+}
+
+.back.enter {
+  transform: rotateY(-180deg) translateX(0vw);
 }
 
 .nav.enter.flip {
   transform: rotateY(-180deg);
 }
 
-.back.flip {
+.back.enter.flip {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
   transform: rotateY(0deg);
 }
 
@@ -391,6 +405,16 @@ a:hover {
   transform: scale(1.1);
 }
 
+#twitter>i {
+  position: relative;
+  left: -0.75px;
+}
+#twitter:hover {
+  background-color: #00aced;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 #linkedin>i {
   position: relative;
   left: -0.75px;
@@ -413,6 +437,84 @@ a:hover {
   transform: scale(1.1);
 }
 
+#reddit>i {
+  position: relative;
+  left: -2.6px;
+}
+#reddit:hover {
+  background-color: #FF5700;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+#link>i {
+  position: relative;
+  left: -2px;
+}
+#link:hover {
+  cursor: pointer;
+  background-color: #00e600;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.tooltip .successBubble {
+  visibility: hidden;
+  background-color: #00e600;
+  color: white;
+  text-align: center;
+  padding: 0px 0;
+  border-radius: 6px;
+  opacity: 0;
+  width: 60px;
+  top: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  z-index: 1;
+  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.tooltip .successBubble.clicked {
+  visibility: visible;
+  transform: translateY(-30px) ;
+  opacity: 1;
+}
+.tooltip .successBubble.clicked.gone {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tooltip .errorBubble {
+  visibility: hidden;
+  background-color: #C13838;
+  color: black;
+  text-align: center;
+  padding: 0px 0;
+  border-radius: 6px;
+  opacity: 0;
+  width: 60px;
+  top: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  z-index: 1;
+  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.tooltip .errorBubble.clicked {
+  visibility: visible;
+  transform: translateY(-30px) ;
+  opacity: 1;
+}
+.tooltip .errorBubble.clicked.gone {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .fa-lg {
   vertical-align: 0;
 }
@@ -428,11 +530,23 @@ a:hover {
   border-radius: 50%;
   border: 5px solid #e1e8ed;
 }
+.picture.small {
+  width: 40px;
+}
 
 .info {
   list-style-type: none;
   padding-left: 0;
   text-align-last: center;
+}
+
+.businessCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .substance {
