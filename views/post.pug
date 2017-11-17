@@ -2,7 +2,11 @@ extends layout
 
 block content
   .wrapper.postPage(itemscope itemtype='http://schema.org/BlogPosting')
-    span(itemprop='publisher') Peter French
+    span(itemscope itemtype='publisher')
+      span(itemscope itemtype='http://schema.org/Person')
+        span(itemprop='givenName') Peter
+        span(itemprop='familyName') French
+        span(itemprop='email') peter.fwrench@gmail.com
     .blog.onMiddle.gone.postPage
       a(href='/blog')
         p To posts #[i.fa.fa-arrow-up]
