@@ -2,6 +2,7 @@ extends layout
 
 block content
   .wrapper.postPage(itemscope itemtype='http://schema.org/BlogPosting')
+    span(itemprop='publisher') Peter French
     .blog.onMiddle.gone.postPage
       a(href='/blog')
         p To posts #[i.fa.fa-arrow-up]
@@ -10,7 +11,7 @@ block content
         .title
           h1.title-text(itemprop='headline')= title
           p.title-date
-            time(itemprop='dateCreated', datetime= year+'-'+month+'-'+day)= date
+            time(itemprop='datePublished', datetime= year+'-'+month+'-'+day)= date
         .line
         .details
           p.description(itemprop='description')= description
@@ -35,7 +36,7 @@ block content
             span.errorBubble Error :/
         .shareAuthor
           a.aboutAuthor.tooltip(href="/")
-              img.picture.small(src='/documents/photo.png')
+              img.picture.small(src='/documents/photo.png' itemprop='image')
               span.tooltiptext About Me
     .footer.postPage
       .copyright
