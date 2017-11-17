@@ -10,9 +10,12 @@ block content
         each post in postsInfo
           .post(data= post.path itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting')
             span(href= post.path itemprop='url')
+            meta(itemprop='author' content='Peter French')
+            div(itemprop='publisher' itemscope itemtype='http://schema.org/Organization')
+              meta(itemprop='name' content='Peter French')
             .title
-              h1.title-text= post.title
-              p.title-date= post.dateString
+              h1.title-text(itemprop='headline')= post.title
+              p.title-date(itemprop='datePublished', datetime= year+'-'+month+'-'+day)= post.dateString
             .details
               p.description= post.description
       else
