@@ -112,6 +112,10 @@
   justify-content: center;
 }
 
+.postLink:hover {
+  text-decoration: none;
+}
+
 .title>.title-text{
   font-weight: 200;
   margin-bottom: 3px;

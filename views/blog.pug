@@ -1,14 +1,15 @@
 extends layout
 
 block content
-  .wrapper
-    .blog.onLeft.gone
-      a(href='/')
+  .wrapper(itemscope itemtype='http://schema.org/Blog')
+    .blog.onLeft.gone(itemscope itemtype='http://schema.org/Person')
+      a(href='/' itemprop='url')
         p #[i.fa.fa-arrow-left] To info
     .posts
       if postsInfo.length > 0
         each post in postsInfo
-          .post(data= post.path)
+          .post(data= post.path itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting')
+            span(href= post.path itemprop='url')  
             .title
               h1.title-text= post.title
               p.title-date= post.dateString

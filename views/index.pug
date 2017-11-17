@@ -5,7 +5,9 @@ block content
     .blog.onRight.gone
       a(href='/blog')
         p To blog #[i.fa.fa-arrow-right]
-    .businessCard
+    .businessCard(itemscope itemtype='http://schema.org/Person')
+      span(itemprop='givenName') Peter
+      span(itemprop='familyName') French
       .nav
         h1.name Hi. I'm Peter French.
         .buttons
@@ -26,8 +28,8 @@ block content
       .back
         img.picture(src='/documents/photo.png')
         ul.info
-          li #[i.fa.fa-envelope(aria-hidden=true)] : #[a(href='mailto:peter.fwrench@gmail.com') peter.fwrench@gmail.com]
-          li #[i.fa.fa-phone(aria-hidden=true)] : #[a(href='tel:512-221-0375') (512)221-0375]
+          li #[i.fa.fa-envelope(aria-hidden=true)] : #[a(href='mailto:peter.fwrench@gmail.com' itemprop='email') peter.fwrench@gmail.com]
+          li #[i.fa.fa-phone(aria-hidden=true)] : #[a(href='tel:512-221-0375' itemprop='telephone') (512)221-0375]
         .social
           a#facebook(href='https://www.facebook.com/peter.french.969' target='_blank')
             i.fa.fa-facebook.fa-lg(aria-hidden=true)

@@ -1,19 +1,21 @@
 extends layout
 
 block content
-  .wrapper.postPage
+  .wrapper.postPage(itemscope itemtype='http://schema.org/BlogPosting')
     .blog.onMiddle.gone.postPage
       a(href='/blog')
         p To posts #[i.fa.fa-arrow-up]
     .contentCards
       .titleCard
         .title
-          h1.title-text= title
-          p.title-date= date
+          h1.title-text(itemprop='headline')= title
+          p.title-date
+            time(itemprop='dateCreated', datetime= year+'-'+month+'-'+day)= date
         .line
         .details
-          p.description= description
-      .postContent.markdown-body!= post
+          p.description(itemprop='description')= description
+        span(itemprop='author') Peter French
+      .postContent.markdown-body(itemprop='articleBody')!= post
       .share
         .shareText
           h3 Share
