@@ -2,7 +2,7 @@ extends layout
 
 block content
   .wrapper.postPage(itemscope itemtype='http://schema.org/BlogPosting')
-    span(itemscope itemtype='http://schema.org/publisher')
+    span(itemprop='publisher' itemscope itemtype='http://schema.org/publisher')
       span(itemscope itemtype='http://schema.org/Person')
         span(itemprop='givenName') Peter
         span(itemprop='familyName') French
