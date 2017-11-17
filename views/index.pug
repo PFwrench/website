@@ -6,10 +6,8 @@ block content
       a(href='/blog')
         p To blog #[i.fa.fa-arrow-right]
     .businessCard(itemscope itemtype='http://schema.org/Person')
-      span(itemprop='givenName') Peter
-      span(itemprop='familyName') French
       .nav
-        h1.name Hi. I'm Peter French.
+        h1.name Hi. I'm #[span(itemprop='givenName') Peter] #[span(itemprop='familyName') French].
         .buttons
           .spacer
           #about.tooltip
