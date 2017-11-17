@@ -16,6 +16,7 @@ var sitemap = sm.createSitemap ({
   hostname: 'http://fwren.ch',
   cacheTime: 600000,        // 600 sec - cache purge period
   urls: [
+    { url: '/',  changefreq: 'daily', priority: 0.3 },
     { url: '/blog/',  changefreq: 'daily', priority: 0.3 },
     { url: '/p/2017/11/14/',  changefreq: 'monthly',  priority: 0.7 },
   ]
