@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-108904820-1"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSCV792');</script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-108904820-1');</script><title>Creating fwren.ch</title><link rel="icon" href="/documents/icon.png"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link href="//fonts.googleapis.com/css?family=Muli:200,400,700" rel="stylesheet" type="text/css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css"><link rel="stylesheet" href="/stylesheets/style.css"><link rel="stylesheet" href="/stylesheets/blog.css"><link rel="stylesheet" href="/stylesheets/post.css"><link rel="stylesheet" href="/misc/highlight/styles/github.css"><meta charset="UTF-8"><meta name="author" content="Peter French"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script src="/javascripts/card.js"></script><script src="/javascripts/toggleBlog.js"></script><script src="/misc/highlight/highlight.pack.js"></script></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NSCV792" height="0" width="0" style="display:none;visibility:hidden;"></iframe></noscript><div class="wrapper postPage"><div class="blog onMiddle gone postPage"><a href="#"><p>To posts <i class="fa fa-arrow-up"></i></p></a></div><div class="contentCards"><div class="titleCard"><div class="title"><h1 class="title-text">Creating fwren.ch</h1><p class="title-date">Nov 14 2017</p></div><div class="line"></div><div class="details"><p class="description">I created this website from scratch - come see the process that went into making it.</p></div></div><div class="postContent markdown-body"><h2>Goals</h2>
+<p>The goal of this project was to make a personal website/blog that looked clean, minimal, responsive, and be easy to maintain.</p>
+<ul>
+<li>
+<h4>Goals for personal website</h4>
+<p>I initially created the business-card-like personal website section around a year ago but abandoned the project after finals rolled around last fall. I didn't really have a plan of attack, I had an idea for a personal website that looked like a business card and just started coding. After picking the project back up again, I had to fix and add a few features to that site of the website. While the first stint of working on this had no goal besides a design, the second stint was more focused.</p>
+<p>After digging through the codebase to see where to start, my goals for the personal website were:</p>
+<ul>
+<li>Make the animations as smooth as possible</li>
+<li>Make the website easy to use</li>
+<li>Keep everything simple</li>
+<li>Refactor the code as much as possible</li>
+</ul>
+</li>
+<li>
+<h4>Goals for the blog</h4>
+<p>I decided to create a blog section of the website after I finished the personal website section. After interacting with my poorly documented and messy leftovers from the first stint of creating the personal website, you better believe I planned in advance this time. :smile:</p>
+<p>I wanted the blog to be:</p>
+<ul>
+<li>Simple</li>
+<li>2 layers deep (all posts =&gt; post view)</li>
+<li>Similar business card style to the personal website</li>
+<li>More cleanly designed</li>
+</ul>
+</li>
+</ul>
+<h2>Implementation</h2>
+<h4>Front-end technologies</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Usage</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="//nodejs.org/en/">Node.js</a></td>
+<td>Templating</td>
+<td>Familiarity, wide usage, number of npm modules available</td>
+<td>Familiarity (I didn't learn that much new about node)</td>
+</tr>
+<tr>
+<td><a href="//pugjs.org/api/getting-started.html">Pug</a></td>
+<td>Templating</td>
+<td>Familiarity</td>
+<td>Familiarity</td>
+</tr>
+<tr>
+<td>CSS3</td>
+<td>Style, animations</td>
+<td>Usability across browsers, performance</td>
+<td>CSS3 animations only perform well for a few attributes (transform, opacity)</td>
+</tr>
+<tr>
+<td>Flexbox</td>
+<td>Responsive design</td>
+<td>Speed of development, support across modern browsers</td>
+<td>Lack of standard across older browsers (notably Safari 6)</td>
+</tr>
+</tbody>
+</table>
+<p>Next project, I'm planning to learn a CSS pre-processor in order to prevent massive CSS files with lots of overriding and unnecessary lines of code. I also plan to learn a major frontend framework (i.e. React, Angular, etc.)</p>
+<h4>Back-end technologies</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Usage</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="//www.npmjs.com/package/markdown-it">Markdown-it</a></td>
+<td>Rendering HTML from Markdown</td>
+<td>Extensibility, ease of use</td>
+<td>Plugins can only get you so far</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>Blog posts</td>
+<td>Popularity, simplicity, extensibility</td>
+<td>None that I can think of!</td>
+</tr>
+<tr>
+<td><a href="//www.npmjs.com/package/express">Express</a></td>
+<td>Routing, server</td>
+<td>Familiarity, simplicity</td>
+<td>Familiarity</td>
+</tr>
+<tr>
+<td><a href="//developers.google.com/web/fundamentals/primers/promises">JS promises</a></td>
+<td>handling asynchronous JS functions</td>
+<td>Improves readability, industry standard</td>
+<td>Development time, learning how to debug</td>
+</tr>
+<tr>
+<td><a href="//www.nginx.com">Nginx</a></td>
+<td>Proxy</td>
+<td>Ease of use, familiarity</td>
+<td>Familiarity</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to these mentioned, I tried my hand at writing my own JS modules in order to encapsulate different functions. I wrote a module for reading the markdown blog files, converting them to html through a pug template, and populating the correct file path so they can be served statically. I also wrote a module to clear the rendered posts from the file directory in order to re-render the posts and have no conflicts.</p>
+<h4>Development technologies</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Usage</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="//git-scm.com/book/gr/v2/Customizing-Git-Git-Hooks">Git hooks</a></td>
+<td>Development automation</td>
+<td>Never have to ssh into my server to update the live site again!</td>
+<td>Honestly, none that I can think of.</td>
+</tr>
+<tr>
+<td><a href="//aws.amazon.com/ec2/">AWS EC2</a></td>
+<td>Hosting</td>
+<td>Robust, scale as needed, free tier for a year</td>
+<td>Is a little robust for just a personal website/blog</td>
+</tr>
+</tbody>
+</table>
+<p>I had never used git hooks before, and my god they are fantastic. I've experienced CI before in more robust DevOps environments, but I never went from no CI to CI. Moving from doing everything by hand (manually ssh-ing into the server, pulling down the updated code from Github or wherever, restarting the app, checking to make sure everything still works, etc.) to just doing a git push has been amazing. You don't really appreciate something until you've done it yourself!</p>
+<h2>Major Lessons Learned</h2>
+<ul>
+<li>
+<h4>Plan before you jump into coding</h4>
+<p>If I had planned the initial design of the business card side, I could've saved an embarrassing amount of time. I was told this years ago by my boss, yet I didn't really take it to heart until now. Defining what you want to do with what you code also takes a major role. If I just wanted to mess around with CSS transitions and never publish anything, what I did would've been completely acceptable -- yet here we are. If there's one thing to take out of this project, it's that planning goes a long way.</p>
+</li>
+<li>
+<h4>Research before implementing</h4>
+<p>While I was investigating technologies and libraries to convert markdown files into HTML, I ran across lots of different ways to do the same thing. Most of them didn't do exactly what I wanted, which was to read the markdown files, convert them to HTML, place them in a specific file path, and aggregate the metadata from the markdown files to send to the main blog page. I found one, however, that seemed to do exactly what I wanted -- <a href="//www.metalsmith.io/">Metalsmith</a>. The idea is really cool: provide a markdown to HTML converter and allow others to create plugins to create additional features to the converter. I was convinced that this was the best way to move forward, so I went with it. It did everything I wanted to, except the metadata aggregating. It actually did aggregate data, it just was not accessible when you were outside the Metalsmith function. I stayed up until 2:30AM trying to figure out how to get this goddamn metadata out of Metalsmith, but alas my sleep-deprived brain couldn't figure it out.</p>
+<p>I'm sure there's a way to accomplish what I wanted with Metalsmith, but I should've just put in the work myself to get exactly the features I wanted. In today's world where millions of plugins, libraries, and modules are available to developers across almost all languages and platforms, we all hope there's one out there that is the exact piece of the puzzle we've been missing. I spent more time searching for that one plugin and trying to force it to work than the time it took to write exactly what I needed. From now on, I'm going to a quick search to see if I get lucky. If I don't find it quickly, I'm just going to start implementing it myself.</p>
+</li>
+</ul>
+<h2>Conclusion</h2>
+<ol>
+<li>Plan more</li>
+<li>Research more</li>
+<li>Don't be afraid to put the work in yourself</li>
+<li>Automate as much of the development process as you can</li>
+<li>Who needs cross-browser functionality anyway?</li>
+</ol>
+<p>Thanks for reading!</p>
+</div><div class="share"><div class="shareText"><h3>Share</h3></div><div class="shareButtons"><a class="sharebutton shareFB" id="facebook" href="//www.facebook.com/sharer/sharer.php?u=http%3A//fwren.ch/p/2017/11/14/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden></i></a><a class="sharebutton shareTwitter" id="twitter" href="//twitter.com/home?status=http%3A//fwren.ch/p/2017/11/14/" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden></i></a><a class="sharebutton shareLinkedIn" id="linkedin" href="//www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//fwren.ch/ /p/2017/11/14/&amp;title=Creating fwren.ch&amp;summary=I created this website from scratch - come see the process that went into making it.&amp;source=" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden></i></a><a class="sharebutton shareReddit" id="reddit" href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false" target="_blank"><i class="fa fa-reddit-alien fa-lg" aria-hidden></i></a><a class="sharebutton shareLink tooltip" id="link" data-clipboard-text="http://fwren.ch/p/2017/11/14/"><i class="fa fa-link fa-lg" aria-hidden></i><span class="tooltiptext">Copy link</span><span class="successBubble">Success</span><span class="errorBubble">Error :/</span></a></div><div class="shareAuthor"><a class="aboutAuthor tooltip" href="/"><img class="picture small" src="/documents/photo.png"><span class="tooltiptext">About Me</span></a></div></div></div><div class="footer postPage"><div class="copyright"><p><i class="fa fa-copyright" aria-hidden></i> Peter French 2017</p></div></div></div></body></html>
