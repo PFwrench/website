@@ -5,10 +5,31 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var sm = require('sitemap');
+
 var index = require('./routes/index');
 var blog = require('./routes/blog');
 
 var app = express();
+
+var sitemap = sm.createSitemap ({
+  hostname: 'http://fwren.ch',
+  cacheTime: 600000,        // 600 sec - cache purge period
+  urls: [
+    { url: '/blog/',  changefreq: 'daily', priority: 0.3 },
+    { url: '/p/2017/11/14/',  changefreq: 'monthly',  priority: 0.7 },
+  ]
+});
+
+app.get('/sitemap.xml', function(req, res) {
+  sitemap.toXML( function (err, xml) {
+      if (err) {
+        return res.status(500).end();
+      }
+      res.header('Content-Type', 'application/xml');
+      res.send( xml );
+  });
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
