@@ -2,7 +2,7 @@ extends layout
 
 block content
   .wrapper.postPage(itemscope itemtype='http://schema.org/BlogPosting')    
-    .blog.onMiddle.gone.postPage
+    .blog.onMiddle.gone
       a(href='/blog')
         p To posts #[i.fa.fa-arrow-up]
     .contentCards
@@ -37,7 +37,7 @@ block content
           a.aboutAuthor.tooltip(href="/")
               img.picture.small(src='/documents/photo.png' itemprop='image')
               span.tooltiptext About Me
-    .footer.postPage
+    .footer
       .copyright(itemprop='publisher' itemscope itemtype='http://schema.org/Organization')
         meta(itemprop='logo' content='/documents/icon.png')
         p #[i.fa.fa-copyright(aria-hidden=true)] #[span(itemprop='name') Peter French] 2017
