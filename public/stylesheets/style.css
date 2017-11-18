@@ -111,7 +111,7 @@ a:hover {
   -o-transition: 0.5s;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  position: absolute;
+  /*position: absolute;*/
   transform: translateX(-150vw);
 }
 
@@ -136,7 +136,7 @@ a:hover {
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
   justify-content: space-around;
-  height: 100%;
+  height: auto;
   width: 100%;
   color: white;
 }
@@ -150,6 +150,8 @@ a:hover {
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   background-color: #e8e8e8;
+
+  height: 2em;
 }
 
 .buttons>.spacer {
@@ -168,10 +170,14 @@ a:hover {
   -o-transition: 0.3s;
 }
 
-.buttons>div:hover {
+.buttons>a:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.buttons>a {
+  color: white;
 }
 
 #about:hover {
@@ -386,6 +392,9 @@ a:hover {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: rotateY(-180deg) translateX(150vw);
+
+  /*--width-var: calc(max(525px, 90%));
+  left: calc(50% - var(--width-var) / 2);*/
 }
 
 .back.enter {
@@ -411,7 +420,7 @@ a:hover {
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
   justify-content: center;
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
 }
 

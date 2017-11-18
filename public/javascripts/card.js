@@ -70,8 +70,11 @@ $(function() {
   $(".postContent").addClass("enter");
   $(".share").addClass("enter");
 
-  $(".nav").addClass("enter");
-  $(".back").addClass("enter");
+  setTimeout(function() {
+    $(".nav").addClass("enter");
+    $(".back").addClass("enter");
+  }, 100);
+
   var posts = $(".post");
   var i = 0;
   var staggerPostAnimations = function() {
