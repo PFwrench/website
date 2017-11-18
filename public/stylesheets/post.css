@@ -102,7 +102,7 @@
 }
 
 .postPage {
-  position: static;
+  display: block;
 }
 
 .share {

@@ -3,22 +3,9 @@ html {
 }
 
 body {
-  padding: 0px;
   margin: 0px;
   font: 14px 'Muli', sans-serif;
   font-weight: 200;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%;
-  max-width: 100vw !important;
   background-color: #e8e8e8;
 }
 
@@ -224,12 +211,17 @@ a:hover {
 
   overflow: hidden;
 
-  margin-left: 0px;
   padding-top: 5px;
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   z-index: 1;
+
+  /* Addresses browser issue */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card>.spacer {
