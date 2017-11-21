@@ -5,7 +5,8 @@ var MarkdownIt = require('markdown-it'),
     .use(require('markdown-it-footnote'))
     .use(require('markdown-it-lazy-headers'))
     .use(require('markdown-it-highlightjs'))
-    .use(require('markdown-it-deflist'));
+    .use(require('markdown-it-deflist'))
+    .use(require('markdown-it-emoji'));
 
 converter.linkify.set({
     fuzzyLink: false

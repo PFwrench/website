@@ -3,23 +3,16 @@ title: Creating fwren.ch
 description: I created this website from scratch - come see the process that went into making it.
 date: 11 14 2017
 ---
-## Goals
-The goal of this project was to make a personal website/blog that looked clean, minimal, responsive, and be easy to maintain.
-- #### Goals for personal website
-  I initially created the business-card-like personal website section around a year ago but abandoned the project after finals rolled around last fall. I didn't really have a plan of attack, I had an idea for a personal website that looked like a business card and just started coding. After picking the project back up again, I had to fix and add a few features to that part of the website. While the first stint of working on this had no goal besides a design, the second stint was more focused.
-
-  After digging through the codebase to see where to start, my goals for the personal website were:
-=======
 ### Goals
 The goal of this project was to make a personal website/blog that looked clean and minimal that would scale and be easy to maintain.
  - #### Goals for personal website
- I initially created the business-card-like personal website section around a year ago but abandoned the project after finals rolled around last fall. I didn't really have a plan of attack, I had an idea for a personal website that looked like a business card and just started coding. After picking the project back up again, I had to fix and add a few features to that site of the website. While the first stint of working on this had no goal besides a design, the second stint was more focused.
+   I initially created the business-card-like personal website section around a year ago but abandoned the project after finals rolled around last fall. I didn't really have a plan of attack, I had an idea for a personal website that looked like a business card and just started coding. After picking the project back up again, I had to fix and add a few features to that site of the website. While the first stint of working on this had no goal besides a design, the second stint was more focused.
 
- After digging through the codebase to see where to start, my goals for the personal website were:
-  - Make the animations as smooth as possible
-  - Make the website easy to use
-  - Keep everything simple
-  - Refactor the code as much as possible
+   After digging through the codebase to see where to start, my goals for the personal website were:
+    - Make the animations as smooth as possible
+    - Make the website easy to use
+    - Keep everything simple
+    - Refactor the code as much as possible
 
 - #### Goals for the blog
   I decided to create a blog section of the website after I finished the personal website section. After interacting with my poorly documented and messy leftovers from the first stint of creating the personal website, you better believe I planned in advance this time. :smile:
