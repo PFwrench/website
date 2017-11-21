@@ -3,6 +3,7 @@ extends layout
 block content
   .wrapper(itemscope itemtype='http://schema.org/Blog')
     .blog.onLeft.gone(itemscope itemtype='http://schema.org/Person')
+      meta(itemprop='name' content='Peter French')
       a(href='/' itemprop='url')
         p #[i.fa.fa-arrow-left] To info
     .posts
