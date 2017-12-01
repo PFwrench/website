@@ -36,7 +36,7 @@ $(function () {
 
   $('.post').click(function (event) {
     event.preventDefault();
-    
+
     if (!event) event = window.event;
     $(".blog").removeClass("here");
     $(".blog").addClass("gone");

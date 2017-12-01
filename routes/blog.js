@@ -20,7 +20,8 @@ clean.clear(dest).then(() => {
 /* GET blog page */
 router.get('/', function(req, res, next) {
   res.render('blog', {
-    title: 'Peter French - Blog',
+    title: 'Blog - Peter French',
+    description: 'A blog about software, tech, and other general ponderings.',
     postsInfo: posts
   });
 });

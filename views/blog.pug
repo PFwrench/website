@@ -9,7 +9,7 @@ block content
     .posts
       if postsInfo.length > 0
         each post in postsInfo
-          .post(data= post.path itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting')
+          a(href= post.path).post(data= post.path itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting')
             span(href= post.path itemprop='url')
             meta(itemprop='author' content='Peter French')
             div(itemprop='publisher' itemscope itemtype='http://schema.org/Organization')
