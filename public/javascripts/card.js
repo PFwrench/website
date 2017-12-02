@@ -67,7 +67,9 @@ $(function() {
   $(".none").removeClass("gone");
 
   $(".titleCard").addClass("enter");
-  $(".postContent").addClass("enter");
+  setTimeout(function() {
+    $(".postContent").addClass("enter");
+  }, 500);
   $(".share").addClass("enter");
 
   setTimeout(function() {
