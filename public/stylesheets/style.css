@@ -81,20 +81,20 @@ a:hover {
 .color1 {
   background: linear-gradient(
       -45deg
-      , rgba(34, 116, 165, 0.5) 0%
-      , rgba(34, 116, 165, 0.5) 20%
-      , rgba(112, 109, 209, 0.5) 20%
-      , rgba(112, 109, 209, 0.5) 100%
+      , rgba(48, 57, 92, 0.5) 0%
+      , rgba(48, 57, 92, 0.5) 20%
+      , rgba(74, 100, 145, 0.5) 20%
+      , rgba(74, 100, 145, 0.5) 100%
     );
 }
 
 .color2 {
   background: linear-gradient(
     60deg
-    , rgba(193, 56, 56, 0.5) 0%
-    , rgba(193, 56, 56, 0.5) 75%
-    , rgba(255, 166, 48, 0.5) 75%
-    , rgba(255, 166, 48, 0.5) 100%
+    , rgba(208, 228, 242, 0.5) 0%
+    , rgba(208, 228, 242, 0.5) 75%
+    , rgba(133, 165, 204, 0.5) 75%
+    , rgba(133, 165, 204, 0.5) 100%
   );
 }
 
@@ -214,19 +214,19 @@ a:hover {
 }
 
 #about:hover {
-  background-color: #C13838;
+  background-color: #E37717;
 }
 
 #experience:hover {
-  background-color: #2274A5;
+  background-color: #F8980A;
 }
 
 #projects:hover {
-  background-color: #706DD1;
+  background-color: #FFC31B;
 }
 
 #contact:hover {
-  background-color: #FFA630;
+  background-color: #FFD217;
 }
 
 .copyright {
@@ -239,7 +239,7 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  color: #9E9EA6;
+  color: black;
   font-weight: 200;
 }
 
@@ -251,7 +251,7 @@ a:hover {
   overflow: hidden;
 
   padding-top: 5px;
-  border-radius: 30px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   z-index: 1;
@@ -330,8 +330,8 @@ a:hover {
 }
 
 .card-1 {
-  background-color: #C13838;
-  border: 3px solid #C13838;
+  background-color: #e8e8e8;
+  /*border: 3px solid #e8e8e8;*/
 }
 
 .card-1>.exit {
@@ -339,8 +339,8 @@ a:hover {
 }
 
 .card-2 {
-  background-color: #2274A5;
-  border: 3px solid #2274A5;
+  background-color: #e8e8e8;
+  /*border: 3px solid #e8e8e8;*/
 }
 
 .card-2>.exit {
@@ -348,8 +348,8 @@ a:hover {
 }
 
 .card-3 {
-  background-color: #706DD1;
-  border: 3px solid #706DD1;
+  background-color: #e8e8e8;
+  /*border: 3px solid #e8e8e8;*/
 }
 
 .card-3>.exit {
@@ -527,7 +527,7 @@ a:hover {
 }
 #link:hover {
   cursor: pointer;
-  background-color: #00e600;
+  background-color: #F8980A;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
 }
@@ -641,15 +641,15 @@ a:hover {
 }
 
 .link {
-  color: #2274A5;
+  color: #F8980A;
 }
 
 .resume {
-  color: #C13838;
+  color: #E37717;
 }
 
 .github {
-  color: #706DD1;
+  color: #F8980A;
 }
 
 .projects, .experience, .aboutMe {

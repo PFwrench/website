@@ -1,6 +1,6 @@
 ---
 title: Creating fwren.ch
-description: I created this website from scratch - come see the process that went into making it.
+description: I created this website from scratch - read about the process that went into making it.
 date: 11 14 2017
 ---
 ### Goals
