@@ -226,19 +226,19 @@ a:hover {
 }
 
 #about:hover {
-  background-color: #E37717;
+  background-color: #828ADB;
 }
 
 #experience:hover {
-  background-color: #F8980A;
+  background-color: #6693E9;
 }
 
 #projects:hover {
-  background-color: #FFC31B;
+  background-color: #82B5C9;
 }
 
 #contact:hover {
-  background-color: #FFD217;
+  background-color: #87CFAF;
 }
 
 .copyright {
@@ -653,15 +653,15 @@ a:hover {
 }
 
 .link {
-  color: #F8980A;
+  color: #6693E9;
 }
 
 .resume {
-  color: #E37717;
+  color: #828ADB;
 }
 
 .github {
-  color: #F8980A;
+  color: #82B5C9;
 }
 
 .projects, .experience, .aboutMe {
