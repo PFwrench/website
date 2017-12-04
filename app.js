@@ -18,7 +18,7 @@ var sitemap = sm.createSitemap ({
   urls: [
     { url: '/',  changefreq: 'daily', priority: 0.3 },
     { url: '/blog/',  changefreq: 'daily', priority: 0.3 },
-    { url: '/p/2017/11/14/',  changefreq: 'monthly',  priority: 0.7 },
+    { url: '/p/2017/11/14/',  changefreq: 'daily',  priority: 0.5 },
   ]
 });
 
