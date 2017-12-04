@@ -33,6 +33,10 @@ a:hover {
   z-index: 1;
 }
 
+.blog > a {
+  color: #f6f9fc;
+}
+
 .blog.onRight {
   justify-content: flex-end;
 }
@@ -81,20 +85,28 @@ a:hover {
 .color1 {
   background: linear-gradient(
       -45deg
-      , rgba(48, 57, 92, 0.5) 0%
+      /*, rgba(48, 57, 92, 0.5) 0%
       , rgba(48, 57, 92, 0.5) 20%
       , rgba(74, 100, 145, 0.5) 20%
-      , rgba(74, 100, 145, 0.5) 100%
+      , rgba(74, 100, 145, 0.5) 100%*/
+      , rgba(103, 114, 229, 0.7) 0%
+      , rgba(103, 114, 229, 0.7) 20%
+      , rgba(0, 0, 0, .2) 20%
+      , rgba(0, 0, 0, 0.0) 100%
     );
 }
 
 .color2 {
   background: linear-gradient(
     60deg
-    , rgba(208, 228, 242, 0.5) 0%
-    , rgba(208, 228, 242, 0.5) 75%
-    , rgba(133, 165, 204, 0.5) 75%
-    , rgba(133, 165, 204, 0.5) 100%
+    , rgba(62, 207, 142, 0.5) 0%
+    /*, rgba(208, 228, 242, 0.5) 25%*/
+    /*, rgba(208, 228, 242, 0.5) 75%*/
+    , rgba(64, 138, 248, 0.5) 75%
+    /*, rgba(133, 165, 204, 0.5) 75%*/
+    , rgba(103, 114, 229, 0.7) 75%
+    /*, rgba(133, 165, 204, 0.5) 100%*/
+    /*, rgba(255, 355, 255, 0.7) 100%*/
   );
 }
 
@@ -239,7 +251,7 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  color: black;
+  color: #f6f9fc;
   font-weight: 200;
 }
 
