@@ -79,7 +79,7 @@ a:hover {
   top: 0;
   bottom: 0;
 
-  z-index: -1;
+  z-index: -2;
 }
 
 .color1 {
@@ -638,6 +638,8 @@ a:hover {
   padding: 0 10px;
   box-sizing: border-box;
   width: 100%;
+
+  z-index: 1;
 
   height: 342px;
 }
