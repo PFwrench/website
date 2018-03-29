@@ -21,7 +21,7 @@ clean.clear(dest).then(() => {
 router.get('/', function(req, res, next) {
   res.render('blog', {
     title: 'Blog - Peter French',
-    description: 'A blog about software, tech, and other general ponderings.',
+    description: 'A blog about software, tech, and other ponderings.',
     postsInfo: posts
   });
 });
